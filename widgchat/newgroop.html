@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Widgchat</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="nav" class="primary-color shadow"><button class="nav-button">Menu</button> WidgChat <input type="text" class="search-bar" placeholder="hello"/><input type="submit"/><button id="let-me-login">Login</button><button id="make-me-an-account">Make Account</button></div>
+    <div id="content-wrapper" class="secondary-color">
+      <div id="content-container">
+        <div id="chat-creation-form" class="shadow" style="width:calc(70% - 16px); margin:8px 15%; background:#eee;">
+          Image: <input id="chat-profile-input" class="form-input" type="file" />
+          Name: <input id="chat-name-input" class="form-input" type="text" />
+          Bio: <input id="chat-bio-input" class="form-input" type="text" />
+          Privacy:
+          <select id="chat-privacy-input" class="form-input">
+            <option>Open</option>
+            <option>Private</option>
+            <option>Personal</option>
+          </select>
+          Posting:
+          <select id="chat-posting-input" class="form-input">
+            <option>Me</option>
+            <option>Members</option>
+            <option>admins</option>
+            <option>Open</option>
+          </select>
+          Purpose:
+          <select id="chat-purpose-input" class="form-input">
+            <option>Personal</option>
+            <option>Business</option>
+            <option>Project</option>
+            <option>Art</option>
+            <option>Other</option>
+          </select>
+          background: <input id="chat-background-input" class="form-input" type="file" />
+          Banner: <input id="chat-banner-input" class="form-input" type="file" />
+          Side: <input id="chat-side-input" class="form-input" type="file" />
+          <hr />
+          <button class="primary-color big-button" id="submit-chat-form">Make Chat</button>
+          <button class="secondary-color" id="cancel-chat-form">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="menu">SideMenu</div>
+  </div>
+</body>
+</html>
