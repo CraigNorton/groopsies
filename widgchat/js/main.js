@@ -17,3 +17,12 @@ for(var i = 1950; i <= 2025; i++){
   yearString += "<option value='" + i + "'>" + i + "</option>";
 }
 $("#DOBYear").html(yearString);
+$('body').live('swipeleft swiperight',function(event){
+        if (event.type == "swiperight") {
+           alert("swipped right side");
+        }
+        if (event.type == "swipeleft") {
+            alert("swipped left side");
+        }
+        event.preventDefault();
+    });

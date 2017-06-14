@@ -10,27 +10,72 @@
   <div id="app">
     <div id="nav" class="primary-color shadow"><button class="nav-button">Menu</button> WidgChat <input type="text" class="search-bar" placeholder="hello"/><input type="submit"/><button id="let-me-login">Login</button><button id="make-me-an-account">Make Account</button></div>
     <div id="content-wrapper" class="secondary-color">
-      <div id="content-container">
-        <div id="center-column">
-          <div id="chat-feed">
-            <div id="chat-bio" class="sectional-header primary-color">
-              <button>Members</button><button>Files</button><button>Calender</button><button>Polls</button><button>Locations</button><button>Popular</button><button>Mine</button><button>Settings</button>
+      <div id="content-container" style="display:flex;">
+            <div id="friends-column" class="" style="flex:1;">
+                <div id="friends-list">
+                  <div>Friend</div>
+                </div>
             </div>
-          <div class="group-link">One</div><div class="group-link">One</div><div class="group-link">One</div><div class="group-link">One</div><div class="group-link">One</div><div class="group-link">One</div><div class="group-link">One</div>
+          <div id="center-column" style="height:calc(100%); flex:8;">
+            <div class="page-widgets" style="column-count: 3; column-gap:0px;">
+              <div class="side-widget primary-color addNote" style="margin:8px;">
+                <h2>Add to the Table</h2>
+              </div>
+              <div class="side-widget dropbox" style="margin:8px;">
+                  <div class="sub-header primary-color">FileDrop Title 1</div>
+                  <div class="fileDropZone">File Drop Zone</div>
+                  <div class="fileDropZone">File View Zone</div>
+              </div>
+              <div class="side-widget note" style="margin:8px;">
+                <div class="sub-header primary-color">Note Title 2</div>
+                <div>
+                  This is going to be text the the user wanted to talk about I dont know what it will contain but its there for them.
+                </div>
+              </div>
+              <div class="side-widget mosaic">
+                <div class="sub-header primary-color">List</div>
+                <div>
+                  A bunch of images that they can add to and it will make it look tiled
+                </div>
+              </div>
+              <div class="side-widget pinned">
+                <div class="sub-header primary-color">Pinned Post</div>
+                <div>
+                  A smaller version of the post that is pinned
+                </div>
+              </div>
+              <div class="side-widget pinned">
+                <div class="sub-header primary-color">Pinned Post</div>
+                <div>
+                  A smaller version of the post that is pinned
+                </div>
+              </div>
+              <div class="side-widget pinned">
+                <div class="sub-header primary-color">Pinned Post</div>
+                <div>
+                  A smaller version of the post that is pinned
+                </div>
+              </div>
+              <div class="side-widget pinned">
+                <div class="sub-header primary-color">Pinned Post</div>
+                <div>
+                  A smaller version of the post that is pinned
+                </div>
+              </div>
+              <div class="side-widget pinned" style="height:250px;">
+                <div class="sub-header primary-color">Pinned Post</div>
+                <div>
+                  A smaller version of the post that is pinned
+                </div>
+              </div>
+            </div>
           </div>
-      </div><div id="side-column" style="vertical-align:top;">
-        <div>
-          <div style="background:black;">
-            <div class="sectional-header primary-color" style="margin:0px;">
-            Gadgets</div>          <div class="side-widget">
-            Yo Bitch
-            </div>
-            <div class="side-widget">
-              Div for da side my mans
-            </div>
+
+        <div id="right-side-column" style="vertical-align:top; flex:1;">
+          <div id="groops-list">
+            <div>Friend</div>
           </div>
-      </div>
-      </div>
+        </div>
       </div>
     </div>
     <div id="menu">SideMenu</div>
