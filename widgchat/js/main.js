@@ -2,6 +2,7 @@ $(document).on("click","#make-post",function(){
   var postInput = $("post-input");
   alert("hello");
 })
+alert("hello");
 $(document).on("click","#submit-chat-form",function(){
   alert("hello");
   var profilePic = $("#chat-profile-input").val();
@@ -12,17 +13,13 @@ $(document).on("click","#submit-chat-form",function(){
   var posting = $("#chat-posting-input").val();
   alert("goodbye");
 });
-var yearString = "<option>Year</option>";
-for(var i = 1950; i <= 2025; i++){
-  yearString += "<option value='" + i + "'>" + i + "</option>";
-}
-$("#DOBYear").html(yearString);
-$('body').live('swipeleft swiperight',function(event){
-        if (event.type == "swiperight") {
-           alert("swipped right side");
-        }
-        if (event.type == "swipeleft") {
-            alert("swipped left side");
-        }
-        event.preventDefault();
-    });
+$(document).on("click","#addNote",function(){
+  alert("New Note");
+});
+$(document).on("click",".promoted-content",function(){
+  alert("View The note");
+});
+$(document).on("click", ".side-widget",function(){
+  alert("loading the widget");
+  alert($(this).attr("data-type"));
+});

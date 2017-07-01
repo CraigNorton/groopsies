@@ -11,79 +11,91 @@
     <div id="nav" class="primary-color shadow"><button class="nav-button">Menu</button> WidgChat <input type="text" class="search-bar" placeholder="hello"/><input type="submit"/><button id="let-me-login">Login</button><button id="make-me-an-account">Make Account</button></div>
     <div id="content-wrapper" class="secondary-color">
       <div id="content-container" style="display:flex;">
-            <div id="left-side-column" class="sectional-header primary-color" style="flex:2;">
-              <img src="http://www.costume-shop.com/images/products/secondary/mc-dg90529-1.png" alt="W3Schools.com" style="width:64px; width:calc(100%); margin:8px 0px;">
-              <span style="vertical-align:bottom; display:inline-block; margin:8px;">Zelda Official</span>
-              <div class="dynamic-menu">
-                <div class="menu-button">Members</div><div class="menu-button">Files</div><div class="menu-button">Calender</div><div class="menu-button">Polls</div><div class="menu-button">Locations</div><div class="menu-button">Popular</div><div class="menu-button">Mine</div><div class="menu-button">Settings</div>
-              </div>
+          <div id="left-side-column" class="sectional-header primary-color" style="flex:2;">
+            <div class="friend-link-container">
+              <span>Friend Img</span>
+              <span>Group Link</span>
             </div>
-          <div id="center-column" style="height:calc(100%); flex:8;">
-            <div class="page-widgets" style="column-count: 3; column-gap:0px;">
-              <div id="addNote" class="side-widget primary-color" style="margin:8px;">
-                <h2>Add to the Table</h2>
-              </div>
-              <div class="side-widget dropbox notes-content" style="margin:8px;">
-                  <div class="sub-header primary-color">FileDrop Title</div>
-                  <div class="fileDropZone">File Drop Zone</div>
-                  <div class="fileDropZone">File View Zone</div>
-              </div>
-              <div class="side-widget">
-                <div class="sub-header primary-color">List</div>
-                <div class="notes-content">
-                  A bunch of images that they can add to and it will make it look tiled
-                </div>
-              </div>
+            <div class="group-link-container">
+              <span>Group Img</span>
+              <span>Group Link</span>
+            </div>
+            <div class="group-link-container">
+              <span>Group Img</span>
+              <span>Group Link</span>
+            </div>
+            <div class="group-link-container">
+              <span>Group Img</span>
+              <span>Group Link</span>
+            </div>
+            <div class="group-link-container">
+              <span>Group Img</span>
+              <span>Group Link</span>
+            </div>
+            <div class="group-link-container">
+              <span>Group Img</span>
+              <span>Group Link</span>
+            </div>
+          </div>
+          <div id="center-column" style="height:calc(100%); flex:7; flex-direction:vertical;">
+            <div class="page-widgets" style="column-count: 3; column-gap:0px; height:calc(100% - 40px - 4px);">
+                This will be the chats thing
+            </div>
+            <div id="chat-interaction" class="primary-color" style="height:40px; padding:2px; display:flex; flex-direction:row;">
+              <button><img scr="C:\Users\Craig Norton\Desktop\groopsies\widgchat\img\default.png" height="32" width="32"/></button><button><img src="https://maxcdn.icons8.com/Share/icon/p1em/Photo_Video//camera1600.png" height="32" width="32"/></button><button>More</button><textarea id="post-input" style="background:white; flex:4; resize:vertical;"></textarea><input type="submit" style="float:right;">
             </div>
           </div>
 
-          <div id="right-side-column" style="vertical-align:top; flex:3;">
+          <div id="right-side-column" class="banner-background" style="vertical-align:top; flex:3;">
+            <div id="page-avatar" style="background:white; margin:8px;" class="round-bottom">
+              <img src="http://www.costume-shop.com/images/products/secondary/mc-dg90529-1.png" alt="W3Schools.com" style="width:64px; width:calc(100%); margin:8px 0px;">
+            </div>
             <div class="side-widget search" style="">
               <div class="sub-header primary-color">Search</div>
             </div>
-            <div class="side-widget chat" style="">
-              <div class="sub-header primary-color">Main Chat</div>
+            <div class="side-widget chat" data-type="chat" data-id="242" style="">
+              <div class="sub-header primary-color" data-type="chat">Main Chat</div>
               <div>
                 A smaller version of the post that is pinned
               </div>
             </div>
-            <div class="side-widget chat" style="">
-              <div class="sub-header primary-color">Todos</div>
+            <div class="side-widget chat" data-type="todos" data-id="242" style="">
+              <div class="sub-header primary-color" data-widget-type="todo" data-widget-id="653">Todos</div>
               <div>
-                A smaller version of the post that is pinned
+              All the todos for grouop 6
               </div>
             </div>
-            <div class="side-widget chat" style="">
+            <div class="side-widget chat" data-type="HTML display" data-id="242" style="">
               <div class="sub-header primary-color">HTML box</div>
               <div>
                 A smaller version of the post that is pinned
               </div>
             </div>
-            <div class="side-widget chat" style="">
+            <div class="side-widget chat" data-type="review" data-id="242" style="">
               <div class="sub-header primary-color">Reviews</div>
               <div>
                 A smaller version of the post that is pinned
               </div>
             </div>
-            <div class="side-widget chat" style="">
+            <div class="side-widget chat" data-type="gallery" data-id="242" style="">
               <div class="sub-header primary-color">Gallery</div>
               <div>
                 A smaller version of the post that is pinned
               </div>
             </div>
-            <div class="side-widget chat" style="">
+            <div class="side-widget chat" data-type="members" data-id="242" style="">
               <div class="sub-header primary-color">Members</div>
               <div>
                 A smaller version of the post that is pinned
               </div>
             </div>
-            <div class="side-widget chat" style="">
+            <div class="side-widget chat" data-type="alarms" data-id="242" style="">
               <div class="sub-header primary-color">Alarms</div>
               <div>
                 A smaller version of the post that is pinned
               </div>
             </div>
-            <div class="side-widget chat" style="">
+            <div class="side-widget chat" data-type="contact" data-id="242" style="">
               <div class="sub-header primary-color">Contacts</div>
               <div>
                 A smaller version of the post that is pinned
