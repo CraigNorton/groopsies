@@ -1,84 +1,216 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Widgchat</title>
-  <link rel="stylesheet" href="css/main.css">
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+	body{
+		background:#eee;
+	}
+	#app{
+		width:100%;
+		height:100%;
+	}
+	.nav{
+		height:40px;
+		width:100%;
+		background:;
+		display:flex;
+		flex-direction:row;
+		font-size:32px;
+		line-height:40px;
+		background:white;
+	}
+	.nav > *{
+		flex:1;
+	}
+	.getChats{
+		flex: 0 0 40px;
+	}
+	.getWidgets{
+		flex: 0 0 40px;
+	}
+	#feed-link-container{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0px;
+		left:-100%;
+	}
+	#widget-wheel{
+		height:40px;
+		background:orange;
+	}
+	#chat-feed-container{
+		width:100%;
+		height:100%;
+	}
+	#widget-feed-container{
+		width:100%;
+		height:100%;
+	}
+	#chat-feed-content{
+		height:calc(100% - 40px - 40px);
+	}
+	#send-message{
+		height:40px;
+		background:orange;
+	}
+	#widget-display-content > .nav{
+		color: white;
+	}
+	#widget-display-content > .modal-content, .modal-search{
+		width:640px;
+		max-width:100%;
+		margin:4px auto;
+		background:white;
+		border-radius:4px;
+	}
+	.wheel{
+		width:100%;
+		overflow-x:scroll;
+	}
+	.content-container{
+	
+	}
+	.content-container > .wheel{
+		margin:4px 0px;
+		background:#fff;
+	}
+	.chat-header{
+		border-radius:100%;
+		overflow:hidden;
+		flex:0 0 40px;
+	}
+	.widget-header{
+		overflow:hidden;
+		flex:0 0 40px;
+	}
+	.group-header{
+		border-radius:8px;
+		overflow:hidden;
+		flex:0 0 40px;
+	}
+	.posted-on{
+		background:#fff;
+		margin:4px 0px;
+	}
+	.posted-date{
+		text-align:center;
+	}
+	.posted-content{
+		padding:4px;
+	}
+	.modal-search{
+	}
+	audio{
+		margin:4px 0px;
+		display:block;
+		width:100%;
+	}
+	@media (min-width: 7in) and (max-width: 12in) {
+	}
+	@media (min-width: 0in) and (max-width: 7in) {
+
+	}
+	@media (min-width: 12in) {
+
+	}	
+	</style>
 </head>
 <body>
-  <div id="app">
-    <div id="nav" class="primary-color shadow"><button class="nav-button">Menu</button> WidgChat <input type="text" class="search-bar" placeholder="hello"/><input type="submit"/><button id="let-me-login">Login</button><button id="make-me-an-account">Make Account</button></div>
-    <div id="content-wrapper" class="secondary-color">
-      <div id="content-container" style="display:flex;">
-            <div id="friends-column" class="" style="flex:1;">
-                <div id="friends-list">
-                  <div>Friend</div>
-                </div>
-            </div>
-          <div id="center-column" style="height:calc(100%); flex:8;">
-            <div class="page-widgets" style="column-count: 3; column-gap:0px;">
-              <div class="side-widget primary-color addNote" style="margin:8px;">
-                <h2>Add to the Table</h2>
-              </div>
-              <div class="side-widget dropbox" style="margin:8px;">
-                  <div class="sub-header primary-color">FileDrop Title 1</div>
-                  <div class="fileDropZone">File Drop Zone</div>
-                  <div class="fileDropZone">File View Zone</div>
-              </div>
-              <div class="side-widget note" style="margin:8px;">
-                <div class="sub-header primary-color">Note Title 2</div>
-                <div>
-                  This is going to be text the the user wanted to talk about I dont know what it will contain but its there for them.
-                </div>
-              </div>
-              <div class="side-widget mosaic">
-                <div class="sub-header primary-color">List</div>
-                <div>
-                  A bunch of images that they can add to and it will make it look tiled
-                </div>
-              </div>
-              <div class="side-widget pinned">
-                <div class="sub-header primary-color">Pinned Post</div>
-                <div>
-                  A smaller version of the post that is pinned
-                </div>
-              </div>
-              <div class="side-widget pinned">
-                <div class="sub-header primary-color">Pinned Post</div>
-                <div>
-                  A smaller version of the post that is pinned
-                </div>
-              </div>
-              <div class="side-widget pinned">
-                <div class="sub-header primary-color">Pinned Post</div>
-                <div>
-                  A smaller version of the post that is pinned
-                </div>
-              </div>
-              <div class="side-widget pinned">
-                <div class="sub-header primary-color">Pinned Post</div>
-                <div>
-                  A smaller version of the post that is pinned
-                </div>
-              </div>
-              <div class="side-widget pinned" style="height:250px;">
-                <div class="sub-header primary-color">Pinned Post</div>
-                <div>
-                  A smaller version of the post that is pinned
-                </div>
-              </div>
-            </div>
-          </div>
+	<!--<p style="position:absolute; top:0px; left:0px;">
+		<strong>jQuery resize:</strong>
+		<span id="jqWidth">0</span>,
+		<span id="jqHeight">0</span>
+	</p>-->
+	<div id="app" style="position:absolute; top:0px; left:0px; width:100%; height:100%;">
+		<div id="feed-link-container" >
+			<nav class="nav">
+				People Nav
+			</nav>
+			People List
+		</div>
+		<div id="main-page-container" style="">	
+			<nav class="nav">
+				<button class="getChats" onclick="alert('hello');">Chats</button>
+				<div style="text-align:center;">
+					<b></i>Groopsies</i></b>
+				</div>
+				<button class="getWidgets" onclick="alert('bye');">Settings</button>
+			</nav>
+			<div id="home-content" class="content-container">
+				<div id="recent-people" class="wheel" style="display:flex; flex-direction:row;">
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="chat-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+				</div>
+				<div id="top-widget" class="wheel" style="display:flex; flex-direction:row;">
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="widget-header" href="#" style=" border:1px solid black; margin:4px; "><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/543155-200.png" alt="person-profile" height="40" width="40"/></div>
+				</div>
+				<div id="local-groups" class="wheel" style="display:flex; flex-direction:row;">
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+					<div class="group-header" href="#" style=" border:1px solid black; margin:4px; "><img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="person-profile" height="40" width="40"/></div>
+				</div>
+				<div id="what-you-missed" class="">
+					<div class="posted-on">
+						<div class="posted-date">
+							<b><i>May 5th</i></b>
+						</div>
+						<div class="posted-content">
+							peron: Check this audio out!
+							<audio controls style="display:block;">
+								<source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+					</div>
+					
+					<div class="posted-on">
+						<div class="posted-date">
+							<b><i>May 4th</i></b>
+						</div>
+						<div class="posted-content">
+							peron: I am literelly in love with this video
+							<iframe class="video" height="315" src="https://www.youtube.com/embed/QOfC1PEKt1U" frameborder="0" allowfullscreen style="width:100%;"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+function jqUpdateSize(){
+    // Get the dimensions of the viewport
+    var width = $(window).width();
+    var height = $(window).height();
 
-        <div id="right-side-column" style="vertical-align:top; flex:1;">
-          <div id="groops-list">
-            <div>Friend</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="menu">SideMenu</div>
-  </div>
+    $('#jqWidth').html(width);
+    $('#jqHeight').html(height);
+};
+$(document).ready(jqUpdateSize);    // When the page first loads
+$(window).resize(jqUpdateSize);     // When the browser changes size	
+	</script>
 </body>
 </html>
